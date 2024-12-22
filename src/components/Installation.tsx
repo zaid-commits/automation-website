@@ -2,16 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Button } from './ui/button';
 import { Copy } from 'lucide-react';
-import { useState } from 'react';
 
 export default function Installation() {
-  const [copied, setCopied] = useState(false);
-
   const copyCommand = async (command: string) => {
     try {
       await navigator.clipboard.writeText(command);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => {}, 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
     }

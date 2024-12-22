@@ -11,8 +11,8 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="min-h-screen bg-background antialiased">
-        <div className="flex min-h-screen flex-col">
+      <div className="min-h-screen bg-background font-sans antialiased">
+        <div className="relative flex min-h-screen flex-col">
           <Navbar />
           <MobileNav />
           <main className="flex-1">

@@ -4,7 +4,11 @@ import { Button } from './ui/button';
 import { Copy } from 'lucide-react';
 import { Toaster, toast } from "react-hot-toast";
 
+import { useState } from 'react';
+
 export default function Installation() {
+  const [selectedTab, setSelectedTab] = useState('npm');
+
   const copyCommand = async (command: string) => {
     try {
       await navigator.clipboard.writeText(command);
@@ -30,13 +34,12 @@ export default function Installation() {
             <CardTitle>Choose Your Installation Method</CardTitle>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="npm" className="w-full">
+            <Tabs defaultValue="npm" className="w-full" onValueChange={setSelectedTab}>
               <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="npx">npx</TabsTrigger>
                 <TabsTrigger value="npm">npm</TabsTrigger>
                 <TabsTrigger value="bun">bun</TabsTrigger>
-                <TabsTrigger value="npx">npx</TabsTrigger>
               </TabsList>
-              {/* tab1 */}
               <TabsContent value="npm" className="space-y-4">
                 <div className="relative">
                   <pre className="bg-muted rounded-lg p-4 overflow-x-auto">
@@ -52,8 +55,6 @@ export default function Installation() {
                   </Button>
                 </div>
               </TabsContent>
-
-              {/* tab 2 */}
               <TabsContent value="bun" className="space-y-4">
                 <div className="relative">
                   <pre className="bg-muted rounded-lg p-4 overflow-x-auto">
@@ -85,22 +86,24 @@ export default function Installation() {
                 </div>
               </TabsContent>
             </Tabs>
-            <div className="mt-6 space-y-4">
-              <h3 className="font-medium">Then run:</h3>
-              <div className="relative">
-                <pre className="bg-muted rounded-lg p-4 overflow-x-auto">
-                  <code>vite-setup</code>
-                </pre>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="absolute right-2 top-2"
-                  onClick={() => copyCommand('chmod +x setup.sh && ./setup.sh')}
-                >
-                  <Copy className="h-4 w-4" />
-                </Button>
+            {selectedTab !== 'npx' && (
+              <div className="mt-6 space-y-4">
+                <h3 className="font-medium">Then run:</h3>
+                <div className="relative">
+                  <pre className="bg-muted rounded-lg p-4 overflow-x-auto">
+                    <code>vite-setup</code>
+                  </pre>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-2 top-2"
+                    onClick={() => copyCommand('chmod +x setup.sh && ./setup.sh')}
+                  >
+                    <Copy className="h-4 w-4" />
+                  </Button>
+                </div>
               </div>
-            </div>
+            )}
           </CardContent>
         </Card>
       </div>

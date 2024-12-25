@@ -6,10 +6,10 @@ import { Sheet, SheetTrigger } from './ui/sheet';
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between">
-        <div className="flex gap-6 md:gap-10">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+        <div className="flex items-center gap-6 md:gap-10">
           <a href="/" className="flex items-center space-x-2">
-            <span className="font-bold inline-block">Vite Setup Script</span>
+            <span className="font-bold inline-block">Vite-Shadcn Setup</span>
           </a>
           <nav className="hidden md:flex gap-6">
             <a 
@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Button variant="outline" size="icon" asChild className="hidden md:inline-flex">
             <a
-              href="https://github.com/yourusername/vite-setup-script"
+              href="https://github.com/zaid-commits/vite-shadcn-setup"
               target="_blank"
               rel="noopener noreferrer"
             >

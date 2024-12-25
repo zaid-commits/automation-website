@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import MobileNav from './components/MobileNav';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import HowItWorks from './components/HowItWorks';
+// import HowItWorks from './components/HowItWorks';
 import Installation from './components/Installation';
 import Demo from './components/Demo';
 import Footer from './components/Footer';
@@ -18,7 +18,7 @@ export default function App() {
           <main className="flex-1">
             <Hero />
             <Features />
-            <HowItWorks />
+            {/* <HowItWorks /> */}
             <Installation />
             <Demo />
           </main>

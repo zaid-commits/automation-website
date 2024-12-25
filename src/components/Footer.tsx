@@ -19,7 +19,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/yourusername/vite-setup-script"
+            href="https://github.com/zaid-commits/vite-shadcn-setup"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 text-sm font-medium underline underline-offset-4"

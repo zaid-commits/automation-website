@@ -5,17 +5,17 @@ const features = [
   {
     icon: <Zap className="h-10 w-10" />,
     title: "Lightning Fast Setup",
-    description: "Get your Vite project up and running in minutes, not hours."
+    description: "Get your Vite project up and running in seconds, not minutes."
   },
   {
     icon: <Package className="h-10 w-10" />,
-    title: "Multiple Package Managers",
-    description: "Choose between Bun, NPM, or Yarn for your project."
+    title: "Multiple Package Managers support",
+    description: "Choose between package managers like NPM or BUN"
   },
   {
     icon: <Paintbrush className="h-10 w-10" />,
     title: "Pre-configured Styling",
-    description: "Tailwind CSS and ShadCN UI components ready to use."
+    description: "ShadCN UI components directly ready to use."
   },
   {
     icon: <Code2 className="h-10 w-10" />,

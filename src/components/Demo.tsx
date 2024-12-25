@@ -72,7 +72,6 @@ export default function Demo() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="npm">npm</SelectItem>
-                    <SelectItem value="yarn">yarn</SelectItem>
                     <SelectItem value="bun">bun</SelectItem>
                   </SelectContent>
                 </Select>

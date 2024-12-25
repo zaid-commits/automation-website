@@ -13,13 +13,13 @@ export default function Hero() {
           Supercharge your project setup with our npm package.
         </h1>
         <p className="max-w-[44rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-          We will setup your project in under 2 minutes with ShadCN, Tailwind, Radix UI, and other dependencies. So you can focus on <span className='font-medium text-purple-800'>building</span> great apps.
+          We will setup your project in under 2 minutes with <span className='font-medium text-purple-800'>ShadCN</span>, <span className='font-medium text-purple-800'>Tailwind</span>, <span className='font-medium text-purple-800'>Radix UI</span>, and other dependencies. So you can focus on <span className='font-medium text-purple-800'>building</span> great apps.
         </p>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-4">
         <Button size="lg" asChild>
-          <a href="#installation" className="flex items-center gap-2">
-            Get Started
+          <a href="https://www.npmjs.com/package/vite-shadcn-setup" className="flex items-center gap-2">
+            View on NPM
             <ArrowRight className="h-4 w-4" />
           </a>
         </Button>

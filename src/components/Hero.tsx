@@ -9,13 +9,12 @@ export default function Hero() {
         <span>Your Vite project setup, automated</span>
       </div>
       <div className="mx-auto flex max-w-[64rem] flex-col items-center gap-4">
-        <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-          Supercharge Your Vite Project Setup
-          <br className="hidden sm:inline" /> with Our Automation Script
+        <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl ">
+        SuperCharge your project setup with our automation script. 
         </h1>
         <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
           Set up a Vite project in minutes with Tailwind CSS, Radix UI, ShadCN, and more.
-          Streamline your development process and focus on building great applications.
+          Streamline your development process and focus on <span className='font-medium text-purple-800'>building</span> building great applications.
         </p>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-4">

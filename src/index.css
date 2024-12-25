@@ -63,6 +63,8 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
   }
   body {
     @apply bg-background text-foreground;

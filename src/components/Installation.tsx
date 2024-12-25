@@ -2,19 +2,22 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Button } from './ui/button';
 import { Copy } from 'lucide-react';
+import { Toaster, toast } from "react-hot-toast";
 
 export default function Installation() {
   const copyCommand = async (command: string) => {
     try {
       await navigator.clipboard.writeText(command);
-      setTimeout(() => {}, 2000);
+      toast.success('Command copied to clipboard!');
     } catch (err) {
+      toast.error('Failed to copy command.');
       console.error('Failed to copy:', err);
     }
   };
 
   return (
     <section id="installation" className="container py-20">
+      <Toaster />
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Installation</h2>
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
@@ -27,36 +30,55 @@ export default function Installation() {
             <CardTitle>Choose Your Installation Method</CardTitle>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="curl" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="curl">curl</TabsTrigger>
-                <TabsTrigger value="wget">wget</TabsTrigger>
+            <Tabs defaultValue="npm" className="w-full">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="npm">npm</TabsTrigger>
+                <TabsTrigger value="bun">bun</TabsTrigger>
+                <TabsTrigger value="npx">npx</TabsTrigger>
               </TabsList>
-              <TabsContent value="curl" className="space-y-4">
+              {/* tab1 */}
+              <TabsContent value="npm" className="space-y-4">
                 <div className="relative">
                   <pre className="bg-muted rounded-lg p-4 overflow-x-auto">
-                    <code>curl -O https://raw.githubusercontent.com/yourusername/vite-setup-script/main/setup.sh</code>
+                    <code>npm i vite-shadcn-setup</code>
                   </pre>
                   <Button
                     variant="ghost"
                     size="icon"
                     className="absolute right-2 top-2"
-                    onClick={() => copyCommand('curl -O https://raw.githubusercontent.com/yourusername/vite-setup-script/main/setup.sh')}
+                    onClick={() => copyCommand('npm i vite-shadcn-setup')}
                   >
                     <Copy className="h-4 w-4" />
                   </Button>
                 </div>
               </TabsContent>
-              <TabsContent value="wget" className="space-y-4">
+
+              {/* tab 2 */}
+              <TabsContent value="bun" className="space-y-4">
                 <div className="relative">
                   <pre className="bg-muted rounded-lg p-4 overflow-x-auto">
-                    <code>wget https://raw.githubusercontent.com/yourusername/vite-setup-script/main/setup.sh</code>
+                    <code>bun install vite-shadcn-setup</code>
                   </pre>
                   <Button
                     variant="ghost"
                     size="icon"
                     className="absolute right-2 top-2"
-                    onClick={() => copyCommand('wget https://raw.githubusercontent.com/yourusername/vite-setup-script/main/setup.sh')}
+                    onClick={() => copyCommand('wget https://raw.githubusercontent.com/zaid-commits/vite-shadcn-automation/main/setup.sh')}
+                  >
+                    <Copy className="h-4 w-4" />
+                  </Button>
+                </div>
+              </TabsContent>
+              <TabsContent value="npx" className="space-y-4">
+                <div className="relative">
+                  <pre className="bg-muted rounded-lg p-4 overflow-x-auto">
+                    <code>npx vite-shadcn-setup</code>
+                  </pre>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-2 top-2"
+                    onClick={() => copyCommand('wget https://raw.githubusercontent.com/zaid-commits/vite-shadcn-automation/main/setup.sh')}
                   >
                     <Copy className="h-4 w-4" />
                   </Button>
@@ -67,7 +89,7 @@ export default function Installation() {
               <h3 className="font-medium">Then run:</h3>
               <div className="relative">
                 <pre className="bg-muted rounded-lg p-4 overflow-x-auto">
-                  <code>chmod +x setup.sh && ./setup.sh</code>
+                  <code>vite-setup</code>
                 </pre>
                 <Button
                   variant="ghost"

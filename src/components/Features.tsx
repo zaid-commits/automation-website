@@ -45,7 +45,7 @@ export default function Features() {
       </div>
       <div className="mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1024px] mt-16">
         {features.map((feature, index) => (
-          <Card key={index} className="relative overflow-hidden">
+          <Card key={index} className="relative overflow-hidden transform transition-transform duration-300 hover:scale-105">
             <CardHeader>
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                 {feature.icon}
@@ -61,4 +61,3 @@ export default function Features() {
     </section>
   );
 }
-

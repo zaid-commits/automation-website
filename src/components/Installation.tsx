@@ -21,7 +21,7 @@ export default function Installation() {
 
   return (
     <section id="installation" className="container py-20">
-      <Toaster />
+      <Toaster position='bottom-right'/>
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-5xl">Installation</h2>
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">

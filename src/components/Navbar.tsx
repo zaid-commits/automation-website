@@ -1,4 +1,4 @@
-import { ModeToggle } from './mode-toggle';
+// import { ModeToggle } from './mode-toggle';
 import { Button } from './ui/button';
 import { Github, Menu } from 'lucide-react';
 import { Sheet, SheetTrigger } from './ui/sheet';
@@ -49,7 +49,7 @@ export default function Navbar() {
               <span className="sr-only">GitHub</span>
             </a>
           </Button>
-          <ModeToggle />
+          {/* <ModeToggle />github */}
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
